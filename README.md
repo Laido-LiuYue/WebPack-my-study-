@@ -1,6 +1,7 @@
 # WebPack-my-study-
 刘冠军老师所教课程关于webpack的部分内容
 >webpack是什么？是一个模块打包机，打包所有的资源，脚本，图片，样式表，自动刷新，代码校验
+
 ##项目初始化
 - 新建一个webpack文件夹
 - 在终端npm内切换至该目录下 cd webpack 然后执行yarn init -y
