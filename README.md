@@ -2,12 +2,12 @@
 刘冠军老师所教课程关于webpack的部分内容
 >webpack是什么？是一个模块打包机，打包所有的资源，脚本，图片，样式表，自动刷新，代码校验
 
-##项目初始化
+### 项目初始化
 - 新建一个webpack文件夹
 - 在终端npm内切换至该目录下 ```cd webpack``` 然后执行```yarn init -y```
 - 创建src文件夹，在src下创建index.js
 
-##安装webpack
+### 安装webpack
 - 本地安装，-D代表是开发依赖，上线的话不需要，不加默认是项目依赖
 ```
 yarn add webpack webpack-cli -D（注意-D与前面有空格）
@@ -15,7 +15,7 @@ yarn add webpack webpack-cli -D（注意-D与前面有空格）
 - 创建.gitignore文件并书写
 - webpack可以进行0配置，直接执行```npx webpack```
 
-##配置webpack
+### 配置webpack
 - 创建一个webpack.config.js文件
 ```
 const path = require('path');
