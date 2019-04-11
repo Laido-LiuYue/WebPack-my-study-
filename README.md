@@ -6,6 +6,7 @@
 - 新建一个webpack文件夹
 - 在终端npm内切换至该目录下 cd webpack 然后执行yarn init -y
 - 创建src文件夹，在src下创建index.js
+
 ##安装webpack
 - 本地安装，-D代表是开发依赖，上线的话不需要，不加默认是项目依赖
 ```
@@ -13,6 +14,7 @@ yarn add webpack webpack-cli -D（注意-D与前面有空格）
 ```
 - 创建.gitignore文件并书写
 - webpack可以进行0配置，直接执行npx webpack
+
 ##配置webpack
 - 创建一个webpack.config.js文件
 ```
@@ -25,18 +27,19 @@ module.exports = {
   }
 };
 ```
-- 配置package.json，设置npm脚本,加上以下代码，执行npm run build
+- 配置package.json，设置npm脚本,加上以下代码
 ```
 "scripts":{
     "build":"webpack"
 },
 ```
-- 设定HtmlWebpackPlugin
+- 再执行npm run build
+- 接下来设定HtmlWebpackPlugin，首先执行命令安装插件
 ```
-安装 yarn add html-webpack-plugin -D
+yarn add html-webpack-plugin -D
 ```
+- 然后配置HtmlWebpackPlugin插件
 ```
-配置
 plugins: [// 插件
     new HtmlWebpackPlugin({ //自动生成HTML并引入js
         title: 'webpack',
@@ -54,11 +57,16 @@ plugins: [// 插件
 ```
 yarn add clean-webpack-plugin -D
 ```
-- 设置webpack-dev-server,执行 npx webpack-dev-server
-，生成内存中的index.html,并执行
+- 设置webpack-dev-server,执行 
+```
+npx webpack-dev-server
+```
+- 生成内存中的index.html,并执行
 ```
 yarn add webpack-dev-server -D
-可配置webpack.config.js
+```
+- 可配置webpack.config.js
+```
 devServer:{
     port:3000
 },
@@ -72,10 +80,12 @@ devServer:{
 ```
 ### loader
 - style-loader css-loader
+- 安装
 ```
-安装：
 yarn add style-loader css-loader -D
-配置：
+```
+- 配置：
+```
 module: {
     rules:[
         {
@@ -106,6 +116,7 @@ module: {
 }
 ```
 - less-loader
+- 安装
 ```
 yarn add less less-loader -D
 ```
