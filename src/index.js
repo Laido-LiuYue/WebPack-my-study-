@@ -1,4 +1,22 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import './index.css';
 import './index.less';
 import num from './home';
-console.log(num+11);
+import Page from './Page';
+let ele = <h1>{num}</h1>
+ReactDOM.render(
+    <Page />,
+    document.querySelector('#root')
+)
+// let fn = () =>{
+//   console.log(num+11);  
+// }
+// fn();
+// fn();
+// class Person{
+//     say=()=>{
+//         alert('hello');
+//     }
+// }
