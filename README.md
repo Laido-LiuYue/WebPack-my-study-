@@ -105,12 +105,12 @@ module: {
 ```
 - less-loader
 - 安装```yarn add less less-loader -D```
+
 - mini-css-extract-plugin插件抽取css
 - 安装```yarn add mini-css-extract-plugin -D```
 - 详情见网站https://github.com/webpack-contrib/mini-css-extract-plugin
 - 配置代码
-- ```loader里
-{
+- ```loader里{
     test:/\.css$/,
     use:[
         {
@@ -122,13 +122,12 @@ module: {
 plugin中
 new MiniCssExtractPlugin({
     filename: 'index.css',
-}),
-```
+}),```
+
 - babel https://www.webpackjs.com/loaders/babel-loader/
 - ```安装yarn add babel-loader @babel/core @babel/preset-env -D```
 - 配置
-```
-{
+```{
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,
     use: {
@@ -141,8 +140,8 @@ new MiniCssExtractPlugin({
             ]
         }
     }
-}
-```
+}```
+
 - ```yarn add @babel/plugin-transform-runtime -D```加上-D是开发依赖
 - ```yarn add @babel/runtime```默认什么都不加就是项目依赖
 - ```yarn add @babel/plugin-proposal-class-properties -D```
