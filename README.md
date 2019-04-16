@@ -126,8 +126,9 @@ new MiniCssExtractPlugin({
 ```
 
 - babel https://www.webpackjs.com/loaders/babel-loader/
+
 ```安装yarn add babel-loader @babel/core @babel/preset-env -D```
-```配置
+```
 {
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,
