@@ -111,7 +111,9 @@ module: {
 - babel https://www.webpackjs.com/loaders/babel-loader/
 - ```yarn add -D babel-loader @babel/core @babel/preset-env```
 
-```yarn add @babel/plugin-transform-runtime -D```加上-D是开发依赖
-```yarn add @babel/runtime```默认什么都不加就是项目依赖
-```yarn add @babel/plugin-proposal-class-properties -D```
-```yarn add react react-dom```
+- ```yarn add @babel/plugin-transform-runtime -D```加上-D是开发依赖
+- ```yarn add @babel/runtime```默认什么都不加就是项目依赖
+- ```yarn add @babel/plugin-proposal-class-properties -D```
+- ```yarn add @babel/preset-react -D```
+- ```yarn add react```
+- ```yarn add react-dom```
