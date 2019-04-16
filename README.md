@@ -110,7 +110,9 @@ module: {
 - 安装```yarn add mini-css-extract-plugin -D```
 - 详情见网站https://github.com/webpack-contrib/mini-css-extract-plugin
 - 配置代码
-```loader里{
+```
+loader里
+{
     test:/\.css$/,
     use:[
         {
@@ -127,7 +129,7 @@ new MiniCssExtractPlugin({
 
 - babel https://www.webpackjs.com/loaders/babel-loader/
 
-```安装yarn add babel-loader @babel/core @babel/preset-env -D```
+- 安装```yarn add babel-loader @babel/core @babel/preset-env -D```
 ```
 {
     test: /\.js$/,
