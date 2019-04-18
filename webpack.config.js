@@ -68,13 +68,23 @@ module.exports = {
                     presets: ['@babel/preset-env','@babel/preset-react'],
                     "plugins":[
                         "@babel/plugin-transform-runtime",
-                        "@babel/plugin-proposal-class-properties"
+                        "@babel/plugin-proposal-class-properties",
+                        ["import", { libraryName: "antd-mobile", style: "css" }] // `style: true` 会加载 less 文件
                     ]
                   }
                 }
+            },
+            {
+                test:/\.(png|jpg|gif)$/,
+                use:[
+                    {
+                        loader:'file-loader'
+                    }
+                ]
             }
 
         ]
-    }
+    },
+    devtool:'source-map'
 
 };

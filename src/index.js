@@ -1,22 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './index.css';
+import Home from'./containers/Home';
+// import 'antd-mobile/dist/antd-mobile.css';
 import './index.less';
-import num from './home';
-import Page from './Page';
-let ele = <h1>{num}</h1>
+// let ele = <h1>hello</h1>;
 ReactDOM.render(
-    <Page />,
+    <Home />,
     document.querySelector('#root')
 )
-// let fn = () =>{
-//   console.log(num+11);  
-// }
-// fn();
-// fn();
-// class Person{
-//     say=()=>{
-//         alert('hello');
-//     }
-// }

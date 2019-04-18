@@ -153,3 +153,12 @@ new MiniCssExtractPlugin({
 - ```yarn add @babel/preset-react -D```
 - ```yarn add react```
 - ```yarn add react-dom```
+
+- 关于antd-mobile可以查看https://mobile.ant.design/docs/react/introduce-cn
+-```yarn add antd-mobile```
+
+- 代码编译错误，报错信息与实际不符，在webpack.config.js一级结构下里添加
+-```devtool:'source-map```
+
+-```yarn add babel-plugin-import -D```
+- 然后在webpack.config.js的plugins里边添加```["import", { libraryName: "antd-mobile", style: "css" }]```
