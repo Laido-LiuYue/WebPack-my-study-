@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import 'antd-mobile/dist/antd-mobile.css';
-import './index.less';
+// import 'antd-mobile/dist/antd-mobile.css'; 
 import './assets/common.less';
-import Home from'./containers/Home';
-// let ele = <h1>hello</h1>;
+import './assets/fonts/iconfont.css';
+import './index.less';
+import App from './containers/App';
 ReactDOM.render(
-    <Home />,
+    <App />,
     document.querySelector('#root')
 )

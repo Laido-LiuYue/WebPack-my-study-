@@ -5,7 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     mode: 'development',//模式：production/development
     devServer: {
-        port: 3000
+        port: 3000,
+        proxy: {
+            "/api": "http://localhost:8080"
+        }
     },
     entry: './src/index.js',
     output: {
@@ -18,14 +21,14 @@ module.exports = {
             title: 'webpack',
             template: './src/index.html',
             hash: true,
-            minify: {
-                collapseWhitespace: true,
-                removeScriptTypeAttributes: true,
-                removeAttributeQuotes: true
-            }
+            // minify: {
+            //     collapseWhitespace: true,
+            //     removeScriptTypeAttributes: true,
+            //     removeAttributeQuotes: true
+            // }
         }),
         new MiniCssExtractPlugin({
-            filename: '[index].css'
+            filename: 'index.css',
         }),
     ],
     module: {
@@ -65,26 +68,24 @@ module.exports = {
                 use: {
                   loader: 'babel-loader',
                   options: {
-                    presets: ['@babel/preset-env','@babel/preset-react'],
-                    "plugins":[
+                    presets: ['@babel/preset-env',"@babel/preset-react"],
+                    "plugins": [
                         "@babel/plugin-transform-runtime",
                         "@babel/plugin-proposal-class-properties",
-                        ["import", { libraryName: "antd-mobile", style: "css" }] // `style: true` 会加载 less 文件
+                        ["import", { libraryName: "antd-mobile", style: "css" }]
                     ]
                   }
                 }
             },
             {
-                test:/\.(png|jpg|gif)$/,
-                use:[
-                    {
-                        loader:'file-loader'
-                    }
+                test: /\.(png|jpg|gif|eot|ttf|svg|woff)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  }
                 ]
             }
-
         ]
     },
     devtool:'source-map'
-
 };

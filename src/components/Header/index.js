@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
-// import { NavBar, Icon } from 'antd-mobile';
+import './index.less';
 export default class Header extends Component {
     render() {
         return (
-            <div>
-              {/* <NavBar
-                mode="dark"
-                icon={<Icon type="left" />}
-                onLeftClick={() => console.log('onLeftClick')}
-                rightContent={[
-                    <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                    <Icon key="1" type="ellipsis" />,
-                ]}
-                >NavBar</NavBar>   */}
+            <div className="header">
                 <img src={require('../../assets/imgs/logo.png')} alt=""/>
+                <button>快速定制</button>
+                <i className="iconfont icon-caidan"></i>
             </div>
-        );
+        )
     }
 }
-
