@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 import {connect} from 'react-redux';
-// import item from 'antd-mobile/lib/popover/item';
 
-class Theme extends Component {
-    render() {
-        return (
+class Theme extends Component { 
+    componentDidMount(){
+        console.log(this.props);
+    }
+    render(){
+        return(
             <ul>
                 {
                     this.props.data.map((item,index)=>{
-                        return(
+                        return (
                             <li key={index}>{item.tit}</li>
                         )
                     })
                 }
             </ul>
-        );
+        )
     }
 }
-let mapStateToProps =(state)=>{
-    return {
-        data:state
+let mapStateToProps = (state)=>{
+    return{
+        data:state.home
     }
 }
 export default connect(mapStateToProps)(Theme);
