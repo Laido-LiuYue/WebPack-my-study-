@@ -164,6 +164,7 @@ new MiniCssExtractPlugin({
 - 然后在webpack.config.js的plugins里边添加```["import", { libraryName: "antd-mobile", style: "css" }]```
 
 -```yarn add react-router-dom```
+
 -```yarn add express```
 
 -使用redux完善项目 在src下建立store，reducers，actions，三个文件夹，再新建一个actionType文件夹
